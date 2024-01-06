@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RaceModel } from '../models/race.model';
 import { Race } from '../models/race.model';
 import { Pony } from '../models/pony.model';
+import { PonyColor } from '../models/ponyColor.enum';
 
 import { RaceComponent } from '../race/race.component';
 
