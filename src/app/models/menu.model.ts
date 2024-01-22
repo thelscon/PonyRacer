@@ -1,5 +1,5 @@
 export interface MenuModel {
   navbarCollapsed: boolean;
 
-  toggleNavbar: () => void;
+  readonly toggleNavbar: () => void;
 }

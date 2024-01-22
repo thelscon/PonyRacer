@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { MenuModel } from '../model/menu.model';
+import { MenuModel } from '../models/menu.model';
 
 @Component({
   selector: 'pr-menu',
