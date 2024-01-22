@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 1,
-    "passes": 1,
+    "tests": 3,
+    "passes": 3,
     "pending": 0,
     "failures": 0,
-    "testsRegistered": 1,
+    "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
-    "start": "2024-01-21T20:38:26.495Z",
-    "end": "2024-01-21T20:38:27.126Z",
-    "duration": 631
+    "start": "2024-01-22T19:01:06.740Z",
+    "end": "2024-01-22T19:01:07.969Z",
+    "duration": 1229
   },
   "results": [
     {
-      "uuid": "21d6d561-682c-4193-9f3d-1dcc350c895d",
+      "uuid": "3afa5821-4cf4-4285-9ea9-755f535d809a",
       "title": "",
       "fullFile": "cypress/e2e/home.cy.ts",
       "file": "cypress/e2e/home.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "61217667-9ac7-4ffc-80f0-fdc440407264",
+          "uuid": "b47e4d08-a03a-4d45-b62a-d62afc397dd8",
           "title": "Ponyracer",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "should display title on home page",
               "fullTitle": "Ponyracer should display title on home page",
               "timedOut": null,
-              "duration": 593,
+              "duration": 601,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,58 @@
               "context": null,
               "code": "cy.visit('/');\ncy.contains('h1', 'Ponyracer');",
               "err": {},
-              "uuid": "5110703b-a779-4529-a6a7-fc54cb414f31",
-              "parentUUID": "61217667-9ac7-4ffc-80f0-fdc440407264",
+              "uuid": "d29de621-e23c-452d-b9fa-17ad88cab278",
+              "parentUUID": "b47e4d08-a03a-4d45-b62a-d62afc397dd8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should display a navbar",
+              "fullTitle": "Ponyracer should display a navbar",
+              "timedOut": null,
+              "duration": 253,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.contains(navbarBrand, 'PonyRacer');\ncy.contains(navbarLink, 'Races');",
+              "err": {},
+              "uuid": "d6406e0d-d77c-4f4a-88bf-c136482651fb",
+              "parentUUID": "b47e4d08-a03a-4d45-b62a-d62afc397dd8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should display a navbar collapsed on small screen",
+              "fullTitle": "Ponyracer should display a navbar collapsed on small screen",
+              "timedOut": null,
+              "duration": 320,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport('iphone-6+');\ncy.visit('/');\ncy.contains(navbarBrand, 'PonyRacer');\ncy.get(navbarLink).should('not.be.visible');\n// toggle the navbar\ncy.get('.navbar-toggler').click();\ncy.get(navbarLink).should('be.visible');",
+              "err": {},
+              "uuid": "d753ac92-ac48-4363-bc76-fa0bdc5532a5",
+              "parentUUID": "b47e4d08-a03a-4d45-b62a-d62afc397dd8",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "5110703b-a779-4529-a6a7-fc54cb414f31"
+            "d29de621-e23c-452d-b9fa-17ad88cab278",
+            "d6406e0d-d77c-4f4a-88bf-c136482651fb",
+            "d753ac92-ac48-4363-bc76-fa0bdc5532a5"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 593,
+          "duration": 1174,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
