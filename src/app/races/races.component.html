@@ -1,5 +1,7 @@
 <div>
-  @for (race of races; track race.id) {
-    <h2>{{ race.name }}</h2>
-  } @empty {}
+  @if (races.length > 0) {
+    @for (race of races; track race.id) {
+      <pr-race [raceModel]="race" />
+    } @empty {}
+  }
 </div>

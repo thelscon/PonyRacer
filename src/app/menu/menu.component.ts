@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { MenuModel } from '../models/menu.model';
+import { MenuComponentModel } from '../models/menuComponent.model';
 
 @Component({
   selector: 'pr-menu',
@@ -10,7 +10,7 @@ import { MenuModel } from '../models/menu.model';
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css'
 })
-export class MenuComponent implements MenuModel {
+export class MenuComponent implements MenuComponentModel {
   navbarCollapsed = true;
 
   toggleNavbar() {

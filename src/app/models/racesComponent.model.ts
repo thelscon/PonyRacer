@@ -1,5 +1,5 @@
 import { RaceModel } from './race.model';
 
-export interface RacesModel {
+export interface RacesComponentModel {
   readonly races: Array<RaceModel>;
 }

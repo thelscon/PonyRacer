@@ -1,0 +1,9 @@
+<h2>{{ raceModel.name }}</h2>
+
+@if (raceModel.ponies.length > 0) {
+  <ul>
+    @for (pony of raceModel.ponies; track pony.id) {
+      <li>{{ pony.name }}</li>
+    }
+  </ul>
+}
