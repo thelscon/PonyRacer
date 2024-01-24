@@ -3,7 +3,9 @@
 @if (raceModel.ponies.length > 0) {
   <ul>
     @for (pony of raceModel.ponies; track pony.id) {
-      <li>{{ pony.name }}</li>
+      <li>
+        <pr-pony [ponyModel]="pony" />
+      </li>
     }
   </ul>
 }
