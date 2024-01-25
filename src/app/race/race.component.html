@@ -1,4 +1,5 @@
 <h2>{{ raceModel.name }}</h2>
+<p>{{ raceModel.startInstant | date: 'short' }}</p>
 
 @if (raceModel.ponies.length > 0) {
   <ul>
