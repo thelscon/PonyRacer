@@ -1,7 +1,3 @@
-<div>
-  @if (races.length > 0) {
-    @for (race of races; track race.id) {
-      <pr-race [raceModel]="race" />
-    } @empty {}
-  }
-</div>
+@for (race of races; track race.id) {
+  <pr-race [raceModel]="race" />
+} @empty {}

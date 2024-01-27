@@ -1,12 +1,6 @@
 <h2>{{ raceModel.name }}</h2>
 <p>{{ raceModel.startInstant | fromNow }}</p>
 
-@if (raceModel.ponies.length > 0) {
-  <ul>
-    @for (pony of raceModel.ponies; track pony.id) {
-      <li>
-        <pr-pony [ponyModel]="pony" />
-      </li>
-    }
-  </ul>
-}
+@for (pony of raceModel.ponies; track pony.id) {
+  <pr-pony [ponyModel]="pony" />
+} @empty {}

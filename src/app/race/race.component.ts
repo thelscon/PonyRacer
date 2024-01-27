@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { DatePipe } from '@angular/common';
 
-import { RaceComponentModel } from '../models/raceComponent.model';
+import { RaceComponentModel } from './race.component.model';
 import { RaceModel } from '../models/race.model';
 
 import { PonyComponent } from '../pony/pony.component';

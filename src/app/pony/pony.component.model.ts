@@ -1,5 +1,5 @@
 import { EventEmitter } from '@angular/core';
-import { PonyModel } from './pony.model';
+import { PonyModel } from '../models/pony.model';
 
 export interface PonyComponentModel {
   readonly ponyModel: PonyModel;
